@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="checkout-content" style="display: block;">
+    <form action="Login" method="post" class="form-horizontal" role="form">
+        <div id="login" class="right">
+            <h2>Returning Customer</h2>
+            <p>I am a returning customer</p>
+
+            <b>E-Mail:</b><br>
+            <input type="text" name="email" value="" placeholder="User Email">
+            <br>
+            <br>
+
+            <b>Password:</b><br>
+            <input type="password" name="password" value="" placeholder="User Password">
+            <br>
+            <a href="#">Forgotten Password</a><br>
+            <br>
+
+            <input type="submit" value="Login" id="button-login" class="button">
+            <br>
+            <br>
+
+            <a href="@Url.Action("Register", "User")">Do not have an account? Sign Up</a>
+            <br>
+            <br>
+        </div>
+    </form>
+</div>
+
+<style>
+    .text-danger {
+        font: bold;
+        color: red;
+    }
+</style>

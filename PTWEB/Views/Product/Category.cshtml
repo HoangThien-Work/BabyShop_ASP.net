@@ -1,0 +1,28 @@
+﻿@model List<PTWEB.Models.LOAI_SP>
+
+<ul class="box-category">
+    
+    <li>
+        
+            <a href="category.html" class="active">Product Category</a>
+            <ul>
+                @foreach (var cat in Model)
+                {
+                    <li><a href="@Url.Action("ProductCategory", "Product", new { ID = cat.maloai })">@cat.ten</a></li>
+                }
+                </ul>
+        </li>
+        <li>
+            <a href="category.html">Toys (12)</a>
+        </li>
+        <li>
+            <a href="category.html">Safety (5)</a>
+        </li>
+        <li>
+            <a href="category.html">Furniture (2)</a>
+        </li>
+        <li> <a href="category.html">Prams (3)</a> </li>
+        <li> <a href="category.html">At Home (2)</a> </li>
+        <li class="last-item"> <a href="category.html">Child Seats (0)</a> </li>
+  
+</ul>

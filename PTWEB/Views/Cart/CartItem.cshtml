@@ -1,0 +1,159 @@
+﻿@model List<PTWEB.Models.CartItem>
+
+@{
+    ViewBag.Title = "CartItem";
+}
+
+@section jsFooter {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <script>
+        var cart = {
+            init: function () {
+                cart.regEvents();
+            },
+
+            regEvents: function () {
+                $('#btnContinue').off('click').on('click', function () {
+                    window.location.href = "/";
+                });
+
+                $('#btnUpdate').off('click').on('click', function () {
+                    var listProduct = $('.updateItem');
+                    var cartList = [];
+                    $.each(listProduct, function (i, item) {
+                        cartList.push({
+                            Quantity: $(item).val(),
+                            Product: {
+                                MaSP: $(item).data('id')
+                            }
+                        });
+                    });
+
+                    $.ajax({
+                        url: '/Cart/Update',
+                        data: { cartModel: JSON.stringify(cartList) },
+                        dataType: 'json',
+                        type: 'POST',
+                        success: function (res) {
+                            if (res.status == true) {
+                                window.location.href = "/Cart/CartItem";
+                            }
+                        }
+                    })
+                });
+
+                $('#btnDeleteAll').off('click').on('click', function () {
+                    $.ajax({
+                        url: '/Cart/DeleteAll',
+                        dataType: 'json',
+                        type: 'POST',
+                        success: function (res) {
+                            if (res.status == true) {
+                                window.location.href = "/Cart/CartItem";
+                            }
+                        }
+                    })
+                });
+            }
+        }
+        cart.init();
+    </script>
+}
+
+    <div id="content">
+        <div class="breadcrumb"> <a href="index.html">Home</a> » <a href="#">Shopping Cart</a> </div>
+        <h1><span class="h1-top">Shopping Cart        &nbsp;(1.00kg) </span></h1>
+        <br />
+        @if (Model == null || Model.Count == 0)
+        {
+            <h2 style="text-align:center; color:red;">You do not have any products in your Shopping Cart.</h2>
+            <br />
+        }
+        else
+        {
+
+            <div class="cart-info">
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="image">Image</td>
+                            <td class="name">Product Name</td>
+                            <td class="model">Model</td>
+                            <td class="quantity">Quantity</td>
+                            <td class="price">Unit Price</td>
+                            <td class="total">Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="image"><a href="product.html"><img src="" alt="" title="" width="130" height="130"></a></td>
+                                <td class="name">
+                                    <a href="product.html">@item.Product.ten</a>
+                                    <div> </div>
+                                </td>
+                                <td class="model">@item.Product.masp</td>
+                                <td><input type="number" class="updateItem" data-id="@item.Product.masp" value="@item.Quantity" style="width: 35px; text-align: center" /></td>
+                                <td class="price">$@item.Product.gia</td>
+                                <td class="total">
+                                    $@((item.Product.gia * item.Quantity))
+                                    <div class="reload">
+                                        <a href="@Url.Action("DeleteItem", "Cart", new { soluong = item.Product.soluong })" data-id="@item.Product.masp"><img src="~/image/del.png" alt="Remove" title="Remove"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <div style="float:right" class="reload">
+                    <input type="image" src="~/image/reload.png" alt="Update" title="Update" id="btnUpdate">
+                    <input type="image" src="~/image/del.png" alt="DeleteAll" title="DeleteAll" id="btnDeleteAll">
+                </div>
+
+                <div>
+                    <div><a href="/" class="button">Continue Shopping</a></div>
+                </div>
+            </div>
+            <hr />
+            <h2>What would you like to do next?</h2>
+            <div class="content">
+                <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+                <table class="radio">
+                    <tbody>
+                        <tr class="highlight">
+                            <td><input type="radio" name="next" value="coupon" id="use_coupon"></td>
+                            <td><label for="use_coupon">Use Coupon Code</label></td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><input type="radio" name="next" value="voucher" id="use_voucher"></td>
+                            <td><label for="use_voucher">Use Gift Voucher</label></td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><input type="radio" name="next" value="shipping" id="shipping_estimate"></td>
+                            <td><label for="shipping_estimate">Estimate Shipping &amp; Taxes</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-total">
+                <table id="total">
+                    <tbody>
+                        <tr>
+                            <td class="right"><b>Quantity:</b></td>
+                            <td class="right last">@Model.Sum(x => x.Quantity) units</td>
+                        </tr>
+                        <tr>
+                            <td class="right lastrow"><b>Total:</b></td>
+                            <td class="right last lastrow">$@Model.Sum(x => (x.Product.gia * x.Quantity))</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <div class="right"><a href="checkout.html" class="button">Checkout</a></div>
+            </div>
+        }
+    </div>

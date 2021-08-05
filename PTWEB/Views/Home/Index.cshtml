@@ -1,0 +1,297 @@
+﻿@model List<PTWEB.Models.SAN_PHAM>
+
+@section Column {
+<div id="column-left">
+    <div class="box">
+        <div class="box-heading">Categories</div>
+        <div class="box-content">
+            @*<ul class="box-category">
+                    <li>
+                        <a href="category.html" class="active">Clothes For Girls (4)</a>
+                        <ul>
+                            <li><a href="category.html">Retrorsum</a></li>
+                            <li><a href="category.html">Suos</a></li>
+                            <li><a href="category.html">Eam</a></li>
+                            <li><a href="category.html">Famulus</a></li>
+                            <li><a href="category.html">Participat</a></li>
+                            <li><a href="category.html">Indulgentia</a></li>
+                            <li><a href="category.html">Dianae</a></li>
+                            <li><a href="category.html">Scitote</a></li>
+                            <li><a href="category.html">Nunc</a></li>
+                            <li class="last-item"><a href="category.html">Lugens</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="category.html">Clothes For Boys (0)</a> </li>
+                    <li>
+                        <a href="category.html">Toys (12)</a>
+                    </li>
+                    <li>
+                        <a href="category.html">Safety (5)</a>
+                    </li>
+                    <li>
+                        <a href="category.html">Furniture (2)</a>
+                    </li>
+                    <li> <a href="category.html">Prams (3)</a> </li>
+                    <li> <a href="category.html">At Home (2)</a> </li>
+                    <li class="last-item"> <a href="category.html">Child Seats (0)</a> </li>
+                </ul>*@
+
+            @Html.Action("Category", "Product")
+
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Featured</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Specials</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Latest</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="~/image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+    }
+
+    <div id="content">
+        <div class="breadcrumb"> &nbsp;<a href="index.html">Home&nbsp;</a> » &nbsp;<a href="#">Clothes For Girls&nbsp;</a> </div>
+        <h1><span class="h1-top">Clothes For Girls</span></h1>
+        <div class="category-info">
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+        </div>
+        <div class="product-filter">
+            <div class="display">
+                <label>Display:</label>
+                <p><span id="list" class="list_on"></span> <span id="grid" onclick="display('grid');"></span></p>
+            </div>
+            <div class="sort">
+                <label>Sort By:</label>
+                <select class="selectBox">
+                    <option value="1" selected="selected">Default</option>
+                    <option value="2">Name (A - Z)</option>
+                    <option value="3">Name (Z - A)</option>
+                    <option value="4">Price (Low &gt; High)</option>
+                    <option value="5">Price (High &gt; Low)</option>
+                    <option value="6">Rating (Highest)</option>
+                    <option value="7">Rating (Lowest)</option>
+                    <option value="8">Model (A - Z)</option>
+                    <option value="9">Model (Z - A)</option>
+                </select>
+            </div>
+            <div class="limit">
+                <label>Show:</label>
+                <select class="selectBox">
+                    <option value="1" selected="selected">15</option>
+                    <option value="2">25</option>
+                    <option value="3">50</option>
+                    <option value="4">75</option>
+                    <option value="5">100</option>
+                </select>
+            </div>
+        </div>
+        <div class="product-compare"><a href="#" id="compare-total">Product Compare (0)</a></div>
+        <div class="product-list">
+            @*<div class="box-product">
+            <span class="new">Sale</span> <a class="image" href="product.html" title="View more"> <img src="image/ex/p1-small.jpg" alt=""> <span class="new2">Sale</span> </a>
+            <div class="list_grid_right">
+                <h3 class="name"><a href="product.html" title="">Brown Shoes for Boys</a></h3>
+                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$60.75</span> <span class="price-tax">Ex Tax: $50.00</span> </p>
+                <p class="description">Tudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                <p class="submit">
+                    <input type="button" value="Add to Cart" class="button">
+                </p>
+                <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+            </div>
+        </div>
+        <div class="box-product">
+            <a class="image" href="product.html" title="View more"> <img src="image/ex/p2-small.jpg" alt=""></a>
+            <div class="list_grid_right">
+                <h3 class="name"><a href="product.html" title="">Brown Shoes for Boys</a></h3>
+                <p class="wrap_price"> <span class="price">$119.50</span> <span class="price-tax">Ex Tax: $100.00</span> </p>
+                <p class="description">Tudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                <p class="submit">
+                    <input type="button" value="Add to Cart" class="button">
+                </p>
+                <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+            </div>
+        </div>
+        <div class="box-product">
+            <a class="image" href="product.html" title="View more"> <img src="image/ex/p3-small.jpg" alt=""></a>
+            <div class="list_grid_right">
+                <h3 class="name"><a href="product.html" title="">Brown Shoes for Boys</a></h3>
+                <p class="wrap_price"> <span class="price">$119.50</span> <span class="price-tax">Ex Tax: $100.00</span> </p>
+                <p class="description">Tudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                <p class="submit">
+                    <input type="button" value="Add to Cart" class="button">
+                </p>
+                <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+            </div>
+        </div>
+        <div class="box-product last-item row-first">
+            <a class="image" href="product.html" title="View more"> <img src="image/ex/p4-small.jpg" alt=""></a>
+            <div class="list_grid_right">
+                <h3 class="name"><a href="product.html" title="">Brown Shoes for Boys</a></h3>
+                <p class="wrap_price"> <span class="price">$119.50</span> <span class="price-tax">Ex Tax: $100.00</span> </p>
+                <p class="description">Tudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+                <p class="submit">
+                    <input type="button" value="Add to Cart" class="button">
+                </p>
+                <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+            </div>
+        </div>*@
+
+            @foreach (var p in Model)
+            {
+                <div class="box-product">
+                    <a class="image" href="@Url.Action("Detail", "Product", new { ID = p.masp })" title="View more"> <img src="~/image/ex/p2-small.png" alt=""></a>
+                    <div class="list_grid_right">
+                        <h3 class="name"><a href="@Url.Action("Detail", "Product", new { ID = p.masp })" title=""> @p.ten</a></h3>
+                        <p class="wrap_price"> <span class="price">$ @p.gia</span> <span class="price-tax">Ex Tax: $100.00</span> </p>
+                        <p class="description">@p.mota</p>
+                        <p class="submit">
+                            <a href="@Url.Action("AddItem", "Cart", new { productID = p.soluong, Quantity = 1 })"><input type="button" value="Add to Cart" class="button"></a>
+                        </p>
+                        <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="pagination">
+            <div class="results">Showing 1 to 4 of 4 (1 Pages)</div>
+        </div>
+    </div>

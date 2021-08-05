@@ -1,0 +1,154 @@
+.jcarousel-skin-tfc {
+	clear: both;
+	padding-top: 23px;
+}
+.jcarousel-skin-tfc .jcarousel-container {
+	margin-bottom: 20px;
+	position: relative;
+	clear: both;
+}
+.jcarousel-skin-tfc .jcarousel-direction-rtl {
+	direction: rtl;
+}
+.jcarousel-skin-tfc .jcarousel-container-horizontal {
+	padding: 0px 34px;
+}
+.image-additional .jcarousel-container-horizontal {
+	padding: 0px 26px;
+}
+.jcarousel-skin-tfc .jcarousel-clip {
+	width: 100%;
+	overflow: hidden;
+	height: 98px;
+	border: 1px solid #fada99;
+	margin:0;
+	padding:0;
+	background: #fff;
+	border-right: none;
+	border-left: none;
+}
+.image-additional .jcarousel-clip {
+	width: 100%;
+	overflow: hidden;
+	height: 77px;
+	border: 1px solid #fada99;
+	margin:0;
+	padding:0;
+	background: #fff;
+	border-right: none;
+	border-left: none;
+}
+.jcarousel-skin-tfc .jcarousel-clip-horizontal {
+}
+.jcarousel-skin-tfc .jcarousel-item {
+	text-align: center;
+}
+.jcarousel-skin-tfc .jcarousel-item-horizontal {
+	margin-top:10px;
+	margin-left: 0;
+	margin-right: 10px;
+}
+.image-additional .jcarousel-item-horizontal {
+	margin-top:7px;
+	margin-left: 0;
+	margin-right: 10px;
+}
+.jcarousel-skin-tfc .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.jcarousel-skin-tfc .jcarousel-item-placeholder {
+	background: #fff;
+	color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tfc .jcarousel-next-horizontal {
+	background: url(../image/next-b.png) no-repeat right top;
+	right: 0;
+	width: 33px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	display: block;
+	opacity: 0.75;
+}
+.jcarousel-skin-tfc .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: 0px;
+	right: auto;
+	background: url(../image/prev-b.png) no-repeat left top;
+}
+.image-additional .jcarousel-next-horizontal {
+	background: url(../image/next-b-small.png) no-repeat right top;
+	right: 0;
+	width: 26px;
+	height: 79px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	display: block;
+	opacity: 0.75;
+}
+.image-additional .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: 0px;
+	right: auto;
+	background: url(../image/prev-b-small.png) no-repeat left top;
+}
+.jcarousel-skin-tfc .jcarousel-next-horizontal:hover, .jcarousel-skin-tfc .jcarousel-next-horizontal:focus {
+	opacity: 1;
+}
+.jcarousel-skin-tfc .jcarousel-next-horizontal:active {
+}
+.jcarousel-skin-tfc .jcarousel-next-disabled-horizontal, .jcarousel-skin-tfc .jcarousel-next-disabled-horizontal:hover, .jcarousel-skin-tfc .jcarousel-next-disabled-horizontal:focus, .jcarousel-skin-tfc .jcarousel-next-disabled-horizontal:active {
+	cursor: default;
+}
+.jcarousel-skin-tfc .jcarousel-prev-horizontal {
+	background: url(../image/prev-b.png) no-repeat left top;
+	left: 0px;
+	width: 33px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	display: block;
+	opacity: 0.75;
+}
+.jcarousel-skin-tfc .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	left: auto;
+	right: 0px;
+	background: url(../image/next-b.png) no-repeat right top;
+}
+.image-additional .jcarousel-prev-horizontal {
+	background: url(../image/prev-b-small.png) no-repeat left top;
+	left: 0px;
+	width: 26px;
+	height: 79px;
+	position: absolute;
+	top: 0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	display: block;
+	opacity: 0.75;
+}
+.image-additional .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	left: auto;
+	right: 0px;
+	background: url(../image/next-b-small.png) no-repeat right top;
+}
+.jcarousel-skin-tfc .jcarousel-prev-horizontal:hover, .jcarousel-skin-tfc .jcarousel-prev-horizontal:focus {
+	opacity: 1;
+}
+.jcarousel-skin-tfc .jcarousel-prev-horizontal:active {
+}
+.jcarousel-skin-tfc .jcarousel-prev-disabled-horizontal, .jcarousel-skin-tfc .jcarousel-prev-disabled-horizontal:hover, .jcarousel-skin-tfc .jcarousel-prev-disabled-horizontal:focus, .jcarousel-skin-tfc .jcarousel-prev-disabled-horizontal:active {
+	cursor: default;
+}
+#carousel-p img {
+	max-height:69px;
+	max-width:69px;
+}

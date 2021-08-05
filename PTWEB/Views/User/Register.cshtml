@@ -1,0 +1,75 @@
+﻿@model PTWEB.Models.RegisterModels
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="checkout-content" style="display: block;">
+    <form action="Register" method="post" class="form-horizontal" role="form">
+        <div class="left">
+            <h2>New Customer</h2>
+            <p>I am a new customer</p>
+
+            <b>Your ID:</b><br>
+            <input type="text" name="id" value="" placeholder="User Id" pattern="[0-9]">
+            @Html.ValidationMessageFor(m => m.ID, "", new { @class = "text-danger" })
+            <br>
+            <br>
+
+            <b>Username:</b><br>
+            <input type="text" name="username" value="" placeholder="User Name">
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            <br>
+            <br>
+
+            <b>E-Mail:</b><br>
+            <input type="text" name="email" value="" placeholder="user123@gmail.com">
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            <br>
+            <br>
+
+            <b>Password:</b><br>
+            <input type="password" name="password" value="" placeholder="Your Password">
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            <br>
+            <br>
+
+            <b>Confirm Password:</b><br>
+            <input type="password" name="confirmpassword" value="" placeholder="Type Your Password again">
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+            <br>
+            <br>
+
+            <b>Your Address:</b><br>
+            <input type="text" name="address" value="" placeholder="HCM City">
+            <br>
+            <br>
+
+            <b>Your Phone Number:</b><br>
+            <input type="text" name="phonenumber" value="" placeholder="0123456789">
+            <br>
+            <br>
+
+            <b>Your Birthday:</b><br>
+            <input type="text" name="dob" value="" placeholder="yyyy-mm-dd">
+            <br>
+            <br>
+
+            @*<button type="submit" class="button">Register</button>*@
+            <input type="submit" value="Register" class="button">
+            <br>
+            <br>
+
+            <a href="@Url.Action("Login", "User")">Already have an account? Sign In</a>
+            <br>
+            <br>
+        </div>
+    </form>
+</div>
+
+<style>
+    .text-danger {
+        font:bold;
+        color:red;
+    }
+</style>
